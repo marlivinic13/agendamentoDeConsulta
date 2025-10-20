@@ -1,0 +1,173 @@
+/* 🎨 RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* 🌿 Fundo geral */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #055e53;
+    /* tom suave de verde-claro */
+}
+
+/* 🧱 Container principal */
+#container {
+    background-color: #FFFFFF;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    width: 380px;
+    text-align: center;
+    animation: fadeIn 0.6s ease;
+}
+
+/* 🩺 Cabeçalho com logo */
+header.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+header.header img#logoEmpresa {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+header.header hr {
+    width: 60%;
+    border: 1px solid #2ECC71;
+}
+
+/* Botões de login social */
+.inputs {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.inputs button {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 1px solid #DDD;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10%;
+    cursor: pointer;
+    margin-top: 5px;
+    background-color: #FFFFFF;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* Ícones dentro dos botões sociais */
+#loginGoogle::before,
+#loginApple::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#loginGoogle::before {
+    background-image: url('assets/iconeGoogle.png');
+}
+
+#loginApple::before {
+    background-image: url('assets/iconApple.ico');
+}
+
+/* Hover nos botões sociais */
+.inputs button:hover {
+    background-color: #F7FFF9;
+    box-shadow: 0 2px 6px rgba(46, 204, 113, 0.25);
+}
+
+/* ✍️ Campos do formulário */
+form {
+    margin-top: 15px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid #CCC;
+    font-size: 14px;
+    outline: none;
+    background-color: #FAFAFA;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus {
+    border: 1px solid #2ECC71;
+    box-shadow: 0 0 6px rgba(46, 204, 113, 0.3);
+}
+
+/* 🔐 Mensagem de orientação */
+#menssagemOrientacao {
+    font-size: 13px;
+    margin-bottom: 10px;
+    min-height: 16px;
+    color: #E74C3C;
+}
+
+/* ✅ Botão principal */
+#btnIndex {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2ECC71;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#btnIndex:hover {
+    background-color: #29B765;
+    box-shadow: 0 2px 8px rgba(46, 204, 113, 0.4);
+}
+
+/* ⚡ Animação de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 📱 Responsividade */
+@media (max-width: 420px) {
+    #container {
+        width: 90%;
+        padding: 30px 20px;
+    }
+}

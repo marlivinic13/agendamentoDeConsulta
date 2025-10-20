@@ -1,0 +1,212 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Corpo da página */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #055e53;
+    /* fundo suave em tom verde-claro */
+}
+
+/* Container central */
+.container {
+    background-color: #FFFFFF;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 2px 4px 14px rgba(0, 0, 0, 0.25);
+    width: 360px;
+    text-align: center;
+    animation: fadeIn 0.6s ease;
+}
+
+/* Logo centralizada */
+header.header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    padding-left: 10px;
+}
+
+header.header img#logoEmpresa {
+    max-width: 300px;
+    height: auto;
+}
+
+header.header hr {
+    width: 60%;
+    border: 1px solid #2ECC71;
+}
+
+/* Título */
+.container h1 {
+    margin-bottom: 25px;
+    font-size: 20px;
+    color: #2ECC71;
+    /* verde principal */
+    font-weight: 700;
+}
+
+/* Botões de login social */
+.inputs {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.inputs button {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 1px solid #DDD;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10%;
+    cursor: pointer;
+    margin-top: 5px;
+    background-color: #FFFFFF;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* Ícones dentro dos botões sociais */
+#loginGoogle::before,
+#loginApple::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#loginGoogle::before {
+    background-image: url('assets/iconeGoogle.png');
+}
+
+#loginApple::before {
+    background-image: url('assets/iconApple.ico');
+}
+
+/* Hover nos botões sociais */
+.inputs button:hover {
+    background-color: #F7FFF9;
+    box-shadow: 0 2px 6px rgba(46, 204, 113, 0.25);
+}
+
+/* Separador */
+#separador {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+#separador hr {
+    flex: 1;
+    border: none;
+    border-top: 1px solid #CCC;
+}
+
+#separador span {
+    margin: 0 10px;
+    color: #555555;
+    font-size: 14px;
+}
+
+/* Inputs de login */
+form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333333;
+    font-weight: 600;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid #CCC;
+    font-size: 14px;
+    outline: none;
+    background-color: #FAFAFA;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus {
+    border: 1px solid #2ECC71;
+    box-shadow: 0 0 6px rgba(46, 204, 113, 0.3);
+}
+
+/* Mensagem de erro */
+#mensagemErro {
+    font-size: 13px;
+    margin-bottom: 10px;
+    min-height: 10px;
+    color: #D63031;
+}
+
+/* Botão de login */
+#btnIndex {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2ECC71;
+    /* cor principal */
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#btnIndex:hover {
+    background-color: #29B765;
+    box-shadow: 0 2px 8px rgba(46, 204, 113, 0.4);
+}
+
+/* Links */
+form a {
+    display: block;
+    font-size: 13px;
+    color: #2ECC71;
+    text-decoration: none;
+    margin: 8px 0;
+    transition: color 0.3s;
+}
+
+form a:hover {
+    text-decoration: underline;
+    color: #29B765;
+}
+
+/* Rodapé do cadastro */
+form div p {
+    font-size: 13px;
+    color: #555555;
+    text-align: left;
+}
+
+form div a {
+    margin-left: 5px;
+    color: #2ECC71;
+    font-weight: 600;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="assets/iconeHead.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <header class="header">
+            <img src="assets/logoEmpresa.png" alt="logo da empresa MedData" id="logoEmpresa">
+        </header>
+        <div class="container">
+            <h1>Faça login em sua conta</h1>
+
+            <div class="inputs" id="inputGoogle">
+                <button type="button" id="loginGoogle" class="btnIndex" onclick="encaminhaParaObras(event)">Continuar com Google</button>
+
+            </div>
+
+            <div class="inputs" id="inputApple">
+                <button type="button" id="loginApple" class="btnIndex" onclick="encaminhaParaObras(event)">Continuar com Apple</button>
+
+            </div>
+
+            <div class="header" id="separador">
+                <hr>
+                <span>ou</span>
+                <hr>
+            </div>
+
+            <form action="#">
+                <label for="user">Usuário</label>
+                <input type="text" name="user" id="user" placeholder="Digite seu Usuário">
+
+                <label for="password">Senha</label>
+                <input type="password" name="password" id="password" placeholder="Digite sua Senha">
+
+                <p id="mensagemErro" style="color: red;"></p>
+
+                <a href="obras.html"> Esqueceu a senha?</a>
+
+                <button type="submit" id="btnIndex" onclick="validarLogin(event)">Entrar</button>
+
+                <div style="display: flex; align-items: center;">
+                    <p>Ainda não tem conta? </p>
+                    <a href="cadastro.html"> Faça seu cadastro!</a>
+                </div>
+
+            </form>
+        </div>
+    </main>
+</body>
+<script src="main.js"></script>
+
+</html>
