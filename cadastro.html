@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro.css">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <main>
+        <header class="header">
+            <img src="assets/logoEmpresa.png" alt="logo da empresa MedData" id="logoEmpresa">
+            <hr>
+        </header>
+
+        <div id="container">
+
+            <h1>Crie uma conta</h1>
+
+            <div class="inputs" id="inputGoogle">
+
+                <span id="cadastroGoogle"></span>
+                <button type="button" id="cadastroGoogle" class="btnIndex">Criar com Google</button>
+
+            </div>
+
+            <div class="inputs" id="inputApple">
+
+                <span id="cadastroApple"></span>
+                <button type="button" id="cadastroAppe" class="btnIndex">Criar com Apple</button>
+
+            </div>
+
+            <form action="">
+
+                <input type="text" name="" id="user" placeholder="Digite seu Usuario">
+                
+                <input type="email" name="" id="email" placeholder="Digite seu e-mail">
+
+                <input type="password" name="" id="password1" placeholder="Digite sua Senha" onclick="verificacaoSenha(event)">
+
+                <input type="password" name="" id="password2" placeholder="Confirme sua Senha" onclick="verificacaoSenha(event)">
+                
+                <p id="mensagemOrientacao" style="color: rgb(238, 18, 18);"></p>
+
+                <button type="submit" id="btnIndex" onclick="encaminhaParaLogin(event)">Entrar</button>
+
+            </form>
+
+        </div>
+    </main>
+</body>
+<!-- a atributo defer garante que o js será carregado apenas após o html, para evitar erro de null -->
+<script src="main.js" defer></script> 
+
+</html>

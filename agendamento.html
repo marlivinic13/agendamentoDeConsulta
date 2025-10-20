@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento</title>
+    <link rel="stylesheet" href="agendamento.css">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <h1>Agendamento</h1>
+            <form action="#" id="formAgendamento">
+
+                <label for="nome">Nome do paciente</label>
+                <input type="text" name="nome" id="nome" placeholder="Digite seu nome aqui" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="Digite seu e-mail aqui" required>
+
+                <label for="telefone">Telefone de contato</label>
+                <input type="tel" name="telefone" id="telefone" placeholder="Digite no formato (xx) xxxxx-xxxx"
+                    required>
+
+                <label for="idade">Idade</label>
+                <input type="number" name="idade" id="idade" placeholder="Digite sua idade aqui" required>
+
+                <label for="data">Data do atendimento</label>
+                <input type="date" name="data" id="data" required>
+
+                <label for="hora">Horário</label>
+                <input type="time" name="hora" id="hora" required>
+
+                <label for="especialidade">Especialidade</label>
+                <select name="especialidade" id="especialidade" required>
+                    <option value="" disabled selected>Selecione a especialidade</option>
+                    <option value="clinico-geral">Clínico Geral</option>
+                    <option value="pediatria">Pediatria</option>
+                    <option value="dermatologia">Dermatologia</option>
+                    <option value="odontologia">Odontologia</option>
+                    <option value="cardiologia">Cardiologia</option>
+                </select>
+
+                <label for="conveniado">Conveniado?</label>
+                <div class="grupo-radio">
+                    <label><input type="radio" name="conveniado" value="sim"> Sim</label>
+                    <label><input type="radio" name="conveniado" value="nao"> Não</label>
+                </div>
+
+                <label for="servico">Serviços adicionais</label>
+                <div class="grupo-checkbox">
+                    <label><input type="checkbox" name="servico" value="retorno"> Retorno</label>
+                    <label><input type="checkbox" name="servico" value="exames"> Exames</label>
+                    <label><input type="checkbox" name="servico" value="teleconsulta"> Teleconsulta</label>
+                    <label><input type="checkbox" name="servico" value="receitaMedica"> Receita Médica</label>
+                </div>
+
+                <label for="sintomas">Sintomas relatados</label>
+                <textarea name="sintomas" id="sintomas" placeholder="Descreva seus sintomas aqui"></textarea>
+
+                <label for="medico">Médico responsável</label>
+                <select name="medico" id="medico" required>
+                    <option value="" disabled selected>Selecione o médico</option>
+                    <option value="drSilva">Dr. Silva</option>
+                    <option value="drAna">Dra. Ana</option>
+                    <option value="drJoao">Dr. João</option>
+                </select>
+
+                <p id="mensagemErro" style="color: red; font-weight: 500;"></p>
+
+                <button type="button" id="btnSalvar" onclick="salvarConsulta(event)">Salvar Agendamento</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

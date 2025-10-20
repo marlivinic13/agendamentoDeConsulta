@@ -1,0 +1,207 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* CORPO */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: #055e53;
+    /* tom de fundo bem suave */
+    padding: 40px 0;
+}
+
+/* CONTAINER CENTRAL */
+.container {
+    background-color: #FFFFFF;
+    width: 420px;
+    padding: 40px 30px 50px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 0.6s ease;
+}
+
+/* LOGO */
+.header-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.header-logo img {
+    max-width: 140px;
+    height: auto;
+}
+
+/* TÍTULO */
+.container h1 {
+    text-align: center;
+    font-size: 22px;
+    color: #2ECC71;
+    /* cor principal */
+    margin-bottom: 25px;
+}
+
+/* FORMULÁRIO */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+}
+
+/* LABELS */
+form label {
+    text-align: left;
+    font-weight: 600;
+    color: #2B2B2B;
+    font-size: 14px;
+    position: relative;
+    padding-left: 28px;
+    margin-top: 8px;
+}
+
+/* ÍCONES NOS LABELS */
+label[for="nome"]::before {
+    content: "👤";
+    position: absolute;
+    left: 0;
+}
+
+label[for="email"]::before {
+    content: "📧";
+    position: absolute;
+    left: 0;
+}
+
+label[for="telefone"]::before {
+    content: "📞";
+    position: absolute;
+    left: 0;
+}
+
+label[for="idade"]::before {
+    content: "🎂";
+    position: absolute;
+    left: 0;
+}
+
+label[for="data"]::before {
+    content: "📅";
+    position: absolute;
+    left: 0;
+}
+
+label[for="hora"]::before {
+    content: "⏰";
+    position: absolute;
+    left: 0;
+}
+
+label[for="especialidade"]::before {
+    content: "⚕️";
+    position: absolute;
+    left: 0;
+}
+
+label[for="convenio"]::before {
+    content: "💳";
+    position: absolute;
+    left: 0;
+}
+
+label[for="servico"]::before {
+    content: "🩺";
+    position: absolute;
+    left: 0;
+}
+
+label[for="sintomas"]::before {
+    content: "📝";
+    position: absolute;
+    left: 0;
+}
+
+label[for="medico"]::before {
+    content: "👨‍⚕️";
+    position: absolute;
+    left: 0;
+}
+
+/* CAMPOS */
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="number"],
+form input[type="date"],
+form input[type="time"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #CCC;
+    background-color: #FAFAFA;
+    font-size: 14px;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border: 1px solid #2ECC71;
+    box-shadow: 0 0 6px rgba(46, 204, 113, 0.3);
+    outline: none;
+}
+
+/* TEXTAREA */
+form textarea,
+form input[type="textarea"] {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* RADIO E CHECKBOX */
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: #2ECC71;
+    margin-right: 6px;
+}
+
+.grupo-radio,
+.grupo-checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+/* BOTÃO */
+#btnSalvar {
+    width: 100%;
+    padding: 12px;
+    background-color: #2ECC71;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#btnSalvar:hover {
+    background-color: #29B765;
+    /* tom levemente mais escuro */
+    box-shadow: 0 2px 8px rgba(46, 204, 113, 0.4);
+}
