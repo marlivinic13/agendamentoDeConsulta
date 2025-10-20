@@ -63,6 +63,7 @@ function salvarConsulta(event) {
     if (idade < 0 || idade > 120) {
         mensagemErro.textContent = "Idade inválida, favor digitar idade entre 0 e 120 anos!"
         console.log("Idade inválida, favor digitar idade entre 0 e 120 anos!")
+        
         return
     } else if (data < new Date()) {
         mensagemErro.textContent = "Favor, selecionar uma data a partir de hoje!"
